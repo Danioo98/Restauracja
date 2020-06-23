@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+	padding: 0;
+  }
+
+body {
+    background: url(images/background.jpg)
+    no-repeat center center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+header {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.head {
+    float: left;
+    color: #fff;
+    font-family: cursive;
+}
+
+nav {
+    float: right;
+    
+}
+
+li {
+    display: inline;
+    padding: 1rem;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.container {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 2%;
+}
+
+ h1, h2, h3 {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+
+p {
+    font-size: 15px;
+}
+
+.category {
+    color: #fff;
+    margin-top: 5%;
+    display: flex;
+    text-align: center;
+    font-family: cursive;
+}
+
+img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+.Tortilla, .Kebab {
+    padding-left: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin:
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.count {
+    margin: 40px 0;
+    width: 25%;
+    display: inline;
+}
+
+.countd {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid;
+    margin: 0 30px;
+    font-size: 12px;
+    overflow: hidden;
+
+}
+
+.countd span {
+    display: block;
+    font-size: 26px;
+    margin-top: 14px;
+}
+
+footer { 
+    height:50px;
+    color:#FFF;
+    text-align:center; 
+     
+}
+
+footer p { 
+    padding: 170px 0 0; 
+}

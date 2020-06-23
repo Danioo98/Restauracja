@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restauracja</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+    .form {
+    margin: 3rem auto;
+    font-family: sans-serif;
+    max-width: 40rem;
+    
+}
+
+    .form .form-row {
+    margin-bottom: 1rem;
+}
+
+    .form .form-row:last-child {
+    margin-bottom: 0;
+}
+
+    .form input,
+    .form textarea {
+    font-family: sans-serif;
+    padding: 0.8rem;
+    border: 1px solid #bbb;
+    display: block;
+    width: 100%;
+    color: #black;
+}
+
+    .form textarea {
+    height: 10rem;
+}
+
+    .form label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    
+    
+}
+
+    .form .submit-btn {
+    font-family: sans-serif;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background: tomato;
+    border: 0;
+    border-radius: 0.2rem;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.3s background-color;
+}
+
+    @media screen and (max-width: 500px) {
+    .form .submit-btn {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+    .form input.field-error,
+    .form textarea.field-error {
+    border-color: tomato;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255,99,71, 0.3);
+}
+    .form-error-text {
+    color: tomato;
+    font-size: 0.8rem;
+}
+    .form-error-inline .form-error-text {
+    display: none;
+}
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="head">
+            <h1>PizzaMac</h1>
+
+
+        </div>
+
+        <nav>
+            <li><a href="glowna.html">Strona główna</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="logowanie/login.php">Logowanie</a></li>
+            <li><a href="rejestracja.html">Rejestracja</a></li>
+        </nav>
+    </header>
+        
+            <div class="container">
+                <h1>Formularz kontaktowy</h1>
+                <form action="mail.php" method="post"></form>
+                <form class="form" id="contactForm" method="post" action="./send-script.php">
+                    <div class="form-row">
+                        <label for="name">Imię</label>
+                        <input type="text" name="name" required pattern=.{3,} id="name" data-error-text="Wypełnij to pole">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" required id="email" data-error-text="Wpisz poprawny email">
+                    </div>
+                    <div class="form-row">
+                        <label for="message">Wiadomość</label>
+                        <textarea name="message" required data-error-text="Musisz wypełnić pole" id="message"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="submit-btn">
+                            Wyślij
+                        </button>
+                    </div>
+                </form>
+
+            <footer>
+                <p>Daniel Młynarski@2020</p>
+            </footer>
+        
+    
+</body>
+</html>
