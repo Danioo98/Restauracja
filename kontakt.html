@@ -7,81 +7,39 @@
     <title>Restauracja</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        * {
-    box-sizing: border-box;
+	body { 
+			font-family: Arial, Helvetica, sans-serif;
+			overflow: hidden;
+}
+	form{    
+			width:320px;    
+			margin:20px auto;    
+			border:2px solid #ccc; 
+			padding:20px;
+}
+	form label {    
+			display:block;    
+			margin-bottom:5px;    
+			font-weight:bold;    
+			font-size:12px;    
+			color:#555555;
+}
+	form textarea,form input{ 
+			padding:5px;  
+			border:1px solid #ccc;  
+			margin-bottom:25px;  
+			width:100%; 
+			box-sizing: border-box;
+}
+		form input[type=submit] { 
+			cursor:pointer; 
+			margin-bottom:0px;
 }
 
-    .form {
-    margin: 3rem auto;
-    font-family: sans-serif;
-    max-width: 40rem;
-    
-}
-
-    .form .form-row {
-    margin-bottom: 1rem;
-}
-
-    .form .form-row:last-child {
-    margin-bottom: 0;
-}
-
-    .form input,
-    .form textarea {
-    font-family: sans-serif;
-    padding: 0.8rem;
-    border: 1px solid #bbb;
-    display: block;
-    width: 100%;
-    color: black;
-}
-
-    .form textarea {
-    height: 10rem;
-}
-
-    .form label {
-    display: block;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
-    
-    
-}
-
-    .form .submit-btn {
-    font-family: sans-serif;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    background: tomato;
-    border: 0;
-    border-radius: 0.2rem;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: 0.3s background-color;
-}
-
-    @media screen and (max-width: 500px) {
-    .form .submit-btn {
-        display: block;
-        width: 100%;
-    }
-}
-
-
-    .form input.field-error,
-    .form textarea.field-error {
-    border-color: tomato;
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(255,99,71, 0.3);
-}
-    .form-error-text {
-    color: tomato;
-    font-size: 0.8rem;
-}
-    .form-error-inline .form-error-text {
-    display: none;
+		footer {
+			position: relative;
+			padding: 240px 0 0;
+			
 }
     </style>
 </head>
@@ -102,25 +60,20 @@
         
             <div class="container">
                 <h1>Formularz kontaktowy</h1>
-                <form class="form" id="contactForm" method="post" action="./send-script.php">
-                    <div class="form-row">
-                        <label for="name">Imię</label>
-                        <input type="text" name="name" required pattern=.{3,} id="name" data-error-text="Wypełnij to pole">
-                    </div>
-                    <div class="form-row">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" required id="email" data-error-text="Wpisz poprawny email">
-                    </div>
-                    <div class="form-row">
-                        <label for="message">Wiadomość</label>
-                        <textarea name="message" required data-error-text="Musisz wypełnić pole" id="message"></textarea>
-                    </div>
-                    <div class="form-row">
-                        <button type="submit" class="submit-btn">
-                            Wyślij
-                        </button>
-                    </div>
-                </form>
+                <div class="row">
+                  <form action="mail.php" method="post">
+  <label for="name">Imię i nazwisko</label>
+  <input type="text" name="name" id="name" placeholder="Jan Kowalski" required>
+
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" placeholder="example@example.com" required>
+
+  <label for="message">Wiadomość</label>
+  <textarea name="message" id="message" placeholder="Wpisz swoją wiadomość" required></textarea>
+  <input type="submit" name="submit" value="Wyślij">
+</form>
+                  
+                </div>
 
             <footer>
                 <p>Daniel Młynarski@2020</p>
