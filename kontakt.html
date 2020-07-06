@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restauracja</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+	body { 
+			font-family: Arial, Helvetica, sans-serif;
+			overflow: hidden;
+}
+	form{    
+			width:320px;    
+			margin:20px auto;    
+			border:2px solid #ccc; 
+			padding:20px;
+}
+	form label {    
+			display:block;    
+			margin-bottom:5px;    
+			font-weight:bold;    
+			font-size:12px;    
+			color:#555555;
+}
+	form textarea,form input{ 
+			padding:5px;  
+			border:1px solid #ccc;  
+			margin-bottom:25px;  
+			width:100%; 
+			box-sizing: border-box;
+}
+		form input[type=submit] { 
+			cursor:pointer; 
+			margin-bottom:0px;
+}
+
+
+		footer {
+			position: relative;
+			padding: 240px 0 0;
+			
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <h1>PizzaMac</h1>
+
+
+        </div>
+
+        <nav>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </nav>
+    </header>
+        
+            <div class="container">
+                <h1>Formularz kontaktowy</h1>
+                <div class="row">
+                  <form action="kontakt.php" method="post">
+  <label for="name">Imię i nazwisko</label>
+  <input type="text" name="name" id="name" placeholder="Jan Kowalski" required>
+
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" placeholder="example@example.com" required>
+
+  <label for="message">Wiadomość</label>
+  <textarea name="message" id="message" placeholder="Wpisz swoją wiadomość" required></textarea>
+  <input type="submit" name="submit" value="Wyślij">
+  <br>
+  <input type="reset"  name="reset" value="Reset">
+</form>
+                  
+                </div>
+
+            <footer>
+                <p>Daniel Młynarski@2020</p>
+            </footer>
+        
+    
+</body>
+</html>
